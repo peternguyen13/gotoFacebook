@@ -1,0 +1,8 @@
+GotoFacebook using C:
+  make
+  sudo make install
+  sudo gotoFacebook list =>update list
+GotoFacebook using python:
+  edit: dir_host="list" => dir_host=<link to list(file)>
+  chmod u+x gotoFacebook.py
+  sudo ./gotoFacebook.py
