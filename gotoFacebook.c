@@ -1,5 +1,5 @@
 /** gotoFacebook Program
- * Version 0.2a
+ * Version 0.3a
  * Written by Nguyen Vu Hoang (Peter Nguyen)
  * Public: GPL
  **/
@@ -28,11 +28,7 @@ static char link_host[MAX_LINE_LEN+1]="/etc/hosts"; // => For Linux
 static char backup_default[MAX_LINE_LEN+1]="127.0.0.1 localhost"; //=> change file this to be suitable for you
 // For Windows: static char link_host[MAX]="C:\Windows\System32\driver\etc\hosts"
 
-  /* int changes_host(char link_host_files);
-   * return 0; Error
-   * return 1; Success
-   */
-
+/*Change host file*/
 int changes_host(char link_host_files[MAX_LINE_LEN+1]){  
   char buf[MAX_LINE_LEN+1];
   FILE *file_from;
@@ -75,7 +71,7 @@ int changes_host(char link_host_files[MAX_LINE_LEN+1]){
   }
   return 1;
 }
-
+/*Resore host file*/
 int restore_host_file(){
   FILE *f_open;
   
@@ -94,29 +90,35 @@ int restore_host_file(){
   return 1;  
 } 
 
-/* Main progream */
+/* Main program */
 int main(int argc, char *argv[]){
-  int bool; //get True or False
-  int opt;//getopt()  
-  while ((opt=getopt(argc,argv,"u:r"))!=-1){
-    switch(opt){
-      case 'u':
-	 bool=changes_host(optarg);
-	 if (bool)
+  int opt;//getopt()
+  if (argc < 1){
+    fprintf(stderr,"Usage:%s <option> <sources of file>\n",argv[0]);
+    fprintf(stdout,"Option:\n");
+    fprintf(stdout,"-U: update list file\n");
+    fprintf(stdout,"-R: restore list file\n");
+    fprintf(stdout,"-B: backup list file\n");
+  }
+  else{
+    while ((opt=getopt(argc,argv,"u:r"))!=-1){
+      switch(opt){
+	case 'u':
+	  if (changes_host(optarg))
 	    fprintf(stdout,"%s has been changed successfully. \n",optarg);
-	 else
+	  else
 	    fprintf(stdout,"%s hasn't been changed.\n",optarg);
-	 break;
-      case 'r':
-	 bool=restore_host_file();
-	 if (bool)
+	  break;
+	case 'r':
+	  if (restore_host_file())
 	    fprintf(stdout,"File has been restored successfully. \n");
-	 else
+	  else
 	    fprintf(stdout,"File hasn't been restored.\n");
-	 break;      
-      case '?':
-	 printf("Unknown option %s",optopt);
-	 break;
+	  break;      
+	case '?':
+	  fprintf(stdout,"Unknown option %s",optopt);
+	  break;
+      }
     }
   }
   return 0;

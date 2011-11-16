@@ -1,6 +1,11 @@
 #!/usr/bin/env python2
 import os
 import sys
+##########
+#Written by Peter Nguyen
+#Python version
+##########
+
 
 host_dir="/etc/hosts"
 dir_host="list"

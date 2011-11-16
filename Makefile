@@ -1,4 +1,5 @@
 #Goto FACEBOOK MAKE FILE
+# Written by Peter Nguyen
 
 
 INSTALLDIR=/usr/bin
