@@ -1,15 +1,29 @@
+#################################################################
+#			gotoFacebook				#
+#		Writen by Peter Nguyen (NVH)			#
+#################################################################
+
 GotoFacebook using C:
   Linux:
     make
-    sudo make install
-    sudo gotoFacebook
+    if you want to install gotoFacebook on your computer, you should type:
+	---> sudo make install    
+        ---> sudo gotoFacebook
+    or you can run it portable:
+    sudo ./gotoFacebook
   Windows:
+    Run gotoFacebook as Administrator for Windows 7
     open with C-Free, config line : link_hosts="C:\Windows\System32\drivers\etc\hosts
     click menu build, choose Build -> Build
+    I'll compiler gotoFacebook binary file for Windows soon
   Usage: <option> <sources of file>
 	  -U: update list file
 	  -R: restore list file
-
+	  -B: backup host file
+  Warning:
+	  You should run gotoFacebook -B first to backup your host file
+	  If ip host fail, you will use gotoFacebook -R backup host file
+	  Have fun
 GotoFacebook using python:
   edit: dir_host="list" => dir_host=<link to list(file)>
   chmod u+x gotoFacebook.py
