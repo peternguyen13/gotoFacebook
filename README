@@ -1,0 +1,16 @@
+GotoFacebook using C:
+  Linux:
+    make
+    sudo make install
+    sudo gotoFacebook
+  Windows:
+    open with C-Free, config line : link_hosts="C:\Windows\System32\drivers\etc\hosts
+    click menu build, choose Build -> Build
+  Usage: <option> <sources of file>
+	  -U: update list file
+	  -R: restore list file
+
+GotoFacebook using python:
+  edit: dir_host="list" => dir_host=<link to list(file)>
+  chmod u+x gotoFacebook.py
+  sudo ./gotoFacebook.py
