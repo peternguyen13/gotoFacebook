@@ -15,7 +15,7 @@ GotoFacebook using C:
     Run gotoFacebook as Administrator for Windows 7
     open with C-Free, config line : link_hosts="C:\Windows\System32\drivers\etc\hosts
     click menu build, choose Build -> Build
-    I'll compiler gotoFacebook binary file for Windows soon
+    Binary for Windows + list file ip: http://www.mediafire.com/?l6zyc01yfv1su
   Usage: <option> <sources of file>
 	  -U: update list file
 	  -R: restore list file
