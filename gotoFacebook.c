@@ -179,9 +179,9 @@ int main(int argc, char *argv[]){
 	  break;
 	case 'B':
 	  if (backup_host_file(optarg))
-	    fprintf(stdout,"File has been restored successfully. \n");
+	    fprintf(stdout,"File has been backup successfully. \n");
 	  else
-	    fprintf(stdout,"File hasn't been restored.\n");
+	    fprintf(stdout,"File hasn't been backup.\n");
 	  break;
 	case 'H':
 	  fprintf(stdout,"Option:\n");
