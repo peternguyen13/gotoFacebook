@@ -14,7 +14,7 @@ clean: gotoFacebook
 	-rm gotoFacebook
 
 install: gotoFacebook
-	cp gotoFacebook $(INSTALLDIR);\
+	cp -v gotoFacebook $(INSTALLDIR);\
 	chmod a+w $(INSTALLDIR)/gotoFacebook;\
 	chmod og-w $(INSTALLDIR)/gotoFacebook;\
 
