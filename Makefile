@@ -12,6 +12,7 @@ gotoFacebook: gotoFacebook.c
 
 clean: gotoFacebook
 	-rm gotoFacebook
+	-rm *.o
 
 install: gotoFacebook
 	cp -v gotoFacebook $(INSTALLDIR);\
