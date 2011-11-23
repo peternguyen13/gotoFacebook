@@ -22,7 +22,9 @@ GotoFacebook using C:
 	  -B: backup host file
   Warning:
 	  You should run gotoFacebook -B first to backup your host file
-	  If ip host fail, you will use gotoFacebook -R backup host file
+	  In case, hosts file have problem: 
+	  - Ip host was fail, you can use gotoFacebook -R <link to backup file>
+	  - Internet service doesn't block facebook, you can use gotoFacebook -R <link to backup file>
 	  Have fun
 GotoFacebook using python:
   edit: dir_host="list" => dir_host=<link to list(file)>
