@@ -190,7 +190,7 @@ int main(int argc, char *argv[]){
 	  fprintf(stdout,"-B: backup list file\n");
 	  break;
 	case '?':
-	  fprintf(stdout,"Unknown option %s",optopt);
+	  fprintf(stdout,"Unknown option %s\n",optopt);
 	  break;
       }
     }
